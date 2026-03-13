@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --leafy-green: #5CB85C;
+  --sky-blue: #6BB5E0;
+  --sunshine-yellow: #FFCB45;
+  --cloud-white: #F5F0E8;
+  --breezy-teal: #4DB6AC;
+  --sunset-orange: #FF8A65;
+  --earth-brown: #8D6E63;
+}
+body {
+  background-color: var(--cloud-white);
+  color: var(--earth-brown);
+  /* Subtle paper texture effect using a repeating radial gradient */
+  background-image: radial-gradient(rgba(141, 110, 99, 0.03) 1px, transparent 1px),
+                    radial-gradient(rgba(141, 110, 99, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  overflow-x: hidden;
+}
+/* Custom scrollbar for a storybook feel */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cloud-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sky-blue);
+  border-radius: 10px;
+  border: 3px solid var(--cloud-white);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--breezy-teal);
+}
+/* SVG Filter for hand-drawn edges (can be applied via url(#hand-drawn)) */
+.hand-drawn-border {
+  filter: url('#hand-drawn');
+}
